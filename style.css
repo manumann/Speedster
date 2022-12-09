@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 36px;
+  margin: 20px 0 0 0;
+  color: #555;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-color: #009c05;
+  overflow: hidden;
+}
+
+.playground {
+  position: relative;
+  width: 700px;
+  height: 800px;
+  background-image: url(/img/3SpurenGruppe.png);
+  background-repeat: repeat-y;
+  background-size: contain;
+  overflow: hidden;
+}
+
+.player {
+  position: absolute;
+  background-image: url(/img/Element\ 1.svg);
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 200px;
+  background-position: center;
+  top: 700px;
+  left: 75px;
+}
+
+.player2 {
+  position: absolute;
+  background-image: url(/img/Element\ 3.svg);
+  background-repeat: no-repeat;
+  width: 115px;
+  height: 200px;
+  background-position: center;
+  top: 700px;
+  left: 510px;
+}
+
+.stein {
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  background-image: url(/img/Element\ 2.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flame {
+  height: 150px;
+  margin: 100px 0px 0px 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .playground {
+    height: 1700px;
+  }
+}
