@@ -3,16 +3,6 @@
   margin: 0;
 }
 
-h1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 36px;
-  margin: 20px 0 0 0;
-  color: #555;
-}
-
 body {
   display: flex;
   justify-content: center;
@@ -21,6 +11,64 @@ body {
   background-color: #009c05;
   overflow: hidden;
 }
+
+/* Willkommen Kasten Start */
+
+#welcomediv {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -130px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+  z-index: 100;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 50px 0px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 450px;
+  height: 200px;
+}
+
+.welcometext {
+  padding: 10px 0px 20px 0px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.welcomespeedster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 36px;
+  color: #555;
+}
+
+#welcometoggle {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+  background-color: red;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 10px 100px 0px;
+  text-decoration: none;
+}
+
+#welcometoggle:hover {
+  background-color: lightcoral;
+  color: black;
+}
+
+/* Willkommen Kasten Fertig */
+
+/* PLAYGROUND start */
 
 .playground {
   position: relative;
@@ -32,12 +80,22 @@ body {
   overflow: hidden;
 }
 
+.playgroundspeedster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 36px;
+  margin: 20px 0 0 0;
+  color: #555;
+}
+
 .player {
   position: absolute;
   background-image: url(/img/Element\ 1.svg);
   background-repeat: no-repeat;
   width: 115px;
-  height: 200px;
+  height: 193px;
   background-position: center;
   top: 700px;
   left: 75px;
@@ -48,7 +106,7 @@ body {
   background-image: url(/img/Element\ 3.svg);
   background-repeat: no-repeat;
   width: 115px;
-  height: 200px;
+  height: 193px;
   background-position: center;
   top: 700px;
   left: 510px;
@@ -57,16 +115,20 @@ body {
 .stein {
   position: absolute;
   width: 100px;
-  height: 200px;
+  height: 193px;
   background-image: url(/img/Element\ 2.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .flame {
-  height: 150px;
-  margin: 100px 0px 0px 0px;
+  margin: 175px 0 0 23px;
+  width: 70px;
 }
+
+/* PLAYGROUND end */
+
+/* media screen start */
 
 @media screen and (min-width: 800px) {
   .playground {

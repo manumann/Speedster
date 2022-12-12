@@ -1,6 +1,9 @@
 var spieler = document.querySelector(".player");
 var spieler2 = document.querySelector(".player2");
 
+const targetDiv = document.getElementById("welcomediv");
+const btn = document.getElementById("welcometoggle");
+
 spieler2.style.left = "510px";
 spieler2.style.top = "400px";
 
@@ -9,6 +12,14 @@ spieler.style.top = "400px";
 
 var spielfeld = document.querySelector(".playground");
 var backgroundPosition = 0;
+
+btn.onclick = function () {
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+  }
+};
 
 var timer = new Timer(200);
 
