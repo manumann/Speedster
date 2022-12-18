@@ -17,53 +17,103 @@ body {
 #welcomediv {
   display: flex;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -130px; /* Negative half of height. */
-  margin-left: -250px; /* Negative half of width. */
   z-index: 100;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 50px 0px;
   padding: 20px;
   border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.welcomelogo {
   width: 450px;
-  height: 200px;
 }
 
 .welcometext {
-  padding: 10px 0px 20px 0px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 50px 0px 50px 0px;
+  font-family: poppins;
   font-size: 20px;
   text-align: center;
 }
 
-.welcomespeedster {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 36px;
-  color: #555;
+.steuerungtext {
+  font-family: poppins;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
 }
 
-#welcometoggle {
+.steuerungcontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 170px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.steuerungdiv1 {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+  height: 100px;
+}
+
+.steuerungdiv2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  height: 100px;
+}
+
+.steuerungbild {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.spieler1text {
+  font-family: poppins;
+  font-size: 20px;
+  text-align: center;
+  color: blue;
+  font-weight: 700;
+}
+
+.spieler2text {
+  font-family: poppins;
+  font-size: 20px;
+  text-align: center;
+  color: orange;
+  font-weight: 700;
+}
+
+#welcomebutton {
   color: white;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: poppins;
   font-size: 30px;
+  font-weight: 700;
   background-color: red;
-  padding: 5px;
+  padding: 5px 20px 5px 20px;
   border-radius: 5px;
   border: none;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 10px 100px 0px;
   text-decoration: none;
+  cursor: pointer;
 }
 
-#welcometoggle:hover {
+#welcomebutton:hover {
   background-color: lightcoral;
   color: black;
+}
+
+#welcomebutton:active {
+  background-color: lightcoral;
+  color: grey;
 }
 
 /* Willkommen Kasten Fertig */
@@ -80,19 +130,31 @@ body {
   overflow: hidden;
 }
 
-.playgroundspeedster {
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.playgroundlogo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px 0 0 0;
+  width: 200px;
+}
+
+.punkte {
+  z-index: 0;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 36px;
-  margin: 20px 0 0 0;
-  color: #555;
+  font-size: 20px;
+  color: rgb(255, 221, 0);
 }
 
 .player {
   position: absolute;
-  background-image: url(/img/Element\ 1.svg);
+  background-image: url(/img/AutoBlau.svg);
   background-repeat: no-repeat;
   width: 115px;
   height: 193px;
@@ -103,7 +165,7 @@ body {
 
 .player2 {
   position: absolute;
-  background-image: url(/img/Element\ 3.svg);
+  background-image: url(/img/AutoOrange.svg);
   background-repeat: no-repeat;
   width: 115px;
   height: 193px;
@@ -112,13 +174,14 @@ body {
   left: 510px;
 }
 
-.stein {
+.gegner {
   position: absolute;
   width: 100px;
   height: 193px;
-  background-image: url(/img/Element\ 2.svg);
+  background-image: url(/img/AutoGegner.svg);
   background-repeat: no-repeat;
   background-position: center;
+  z-index: 1;
 }
 
 .flame {
@@ -127,6 +190,79 @@ body {
 }
 
 /* PLAYGROUND end */
+
+/*player death START*/
+
+#player1crashdiv {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 50px 0px;
+  border-radius: 10px;
+  width: 500px;
+  height: 480px;
+  top: 50%;
+  left: 50%;
+  margin-top: -250px;
+  margin-left: -250px;
+}
+
+.restartlogo {
+  width: 450px;
+  padding: 0 0 30px 0;
+}
+
+.restarttext {
+  display: none;
+  font-family: poppins;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: orange;
+}
+
+.restarttext2 {
+  display: none;
+  font-family: poppins;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: blue;
+}
+
+.winnergif {
+  width: 200px;
+  z-index: -10;
+  margin: -30px 0 -20px 0;
+}
+
+.restartdiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.replaytext {
+  margin: 30px 0 0 0;
+  font-family: poppins;
+  font-size: 20px;
+  text-align: center;
+}
+
+.restartimg {
+  width: 100px;
+  padding: 10px 0 0 0;
+  cursor: pointer;
+}
+
+/*player  death END*/
 
 /* media screen start */
 

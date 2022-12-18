@@ -14,24 +14,50 @@
 </head>
 
 <body>
+
   <div id="welcomediv">
-    <h1 class="welcomespeedster">SPEEDSTER</h1>
-    <p class="welcometext">Spiele mit einem Freund und versuche, keinen Unfall zu bauen!</p>
-    <button id="welcometoggle">START</button>
+    <img class="welcomelogo" src="/img/SpeedsterLogo2.svg" alt="logo">
+    <p class="welcometext">Spiele mit einem Freund und versuche, <br> keinen Unfall zu bauen!</p>
+
+    <p class="steuerungtext">Steuerung:</p>
+    <div class="steuerungcontainer">
+      <div class="steuerungdiv1">
+        <img class="steuerungbild" src="/img/Steuerung1.svg" alt="Linke Steuerung">
+        <p class="spieler1text">Spieler 1<br>(links)</p>
+      </div>
+      <div class="steuerungdiv2">
+        <img class="steuerungbild" src="/img/Steuerung2.svg" alt="Rechte Steuerung">
+        <p class="spieler2text">Spieler 2<br>(rechts)</p>
+      </div>
+    </div>
+    <button id="welcomebutton">START</button>
   </div>
+
+  <div id="player1crashdiv">
+    <img class="restartlogo" src="/img/SpeedsterLogo2.svg" alt="logo">
+    <p class="restarttext">Spieler 2 hat gewonnen </p>
+    <p class="restarttext2">Spieler 1 hat gewonnen </p>
+    <img class="winnergif" src="/img/winner.gif" alt="Gewinner Animation">
+    <div class="restartdiv">
+      <p class="replaytext">Nochmal spielen?</p>
+      <img class="restartimg" src="/img/restart1.svg" alt="Neu starten Knopf">
+    </div>
+  </div>
+
 
   <div class="playground">
     <div class="navigation">
-      <div class="nav-name">
-        <h1 class="playgroundspeedster">SPEEDSTER</h1>
+      <div class="nav">
+        <img class="playgroundlogo" src="/img/SpeedsterLogo2.svg" alt="logo">
+        <p class="punkte">0</p>
       </div>
       <div class="nav-counter"></div>
     </div>
     <div class="player">
-      <img class="flame" src="/img/FlammeAnimiert2.GIF" />
+      <img class="flame" src="/img/FlammeAnimiert2.GIF" alt="Animierte Flamme">
     </div>
     <div class="player2">
-      <img class="flame" src="/img/FlammeAnimiert2.GIF" />
+      <img class="flame" src="/img/FlammeAnimiert2.GIF" alt="Animierte Flamme">
     </div>
   </div>
 </body>
